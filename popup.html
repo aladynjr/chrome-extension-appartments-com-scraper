@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartments.com Data Extractor</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 350px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    button {
+      flex-grow: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      background-color: #3498db;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    #clearData {
+      background-color: #e74c3c;
+    }
+    #clearData:hover {
+      background-color: #c0392b;
+    }
+    #status {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    #output {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 12px;
+      resize: vertical;
+    }
+    #downloadData {
+      width: 100%;
+      background-color: #2ecc71;
+    }
+    #downloadData:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <h1>Apartments.com Data Extractor</h1>
+  <div class="button-group">
+    <button id="scrapeCortland">Scrape Cortland</button>
+    <button id="scrapeGardenview">Scrape Gardenview</button>
+    <button id="clearData">Clear</button>
+  </div>
+  <div id="status"></div>
+  <textarea id="output" readonly></textarea>
+  <button id="downloadData">Download JSON</button>
+  <script src="popup.js"></script>
+</body>
+</html>
